@@ -10,7 +10,7 @@ export default function Navbar({cartCount, changeTheme, setInput,  handleSubmit,
   return (
     <nav className="navbar">
     <div className="navbar-search">
-     <Link to="/"><h2>CocktailSelect</h2></Link>
+     <Link to="/"><h2>CoctailSelect</h2></Link>
       <SearchForm setInput={setInput} handleSubmit={handleSubmit}  input={input}  />
     </div>
     <div className="navbar-icon">
