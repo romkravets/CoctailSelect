@@ -70,6 +70,7 @@ main {
 .section-title {
   font-family: var(--primaryFont);
   padding: 10px;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 767px) { 
@@ -217,7 +218,7 @@ main, .cocktail-section {
 
 @media (max-width: 767px) { 
   main, .cocktail-section {
-    padding-top: 4rem;
+    padding-top: 5rem;
   }
 }
 
@@ -252,7 +253,7 @@ main, .cocktail-section {
 
 .section-info .drink {
   display: flex;
-  padding-top: 20px;
+  padding: 20px 0;
 }
 
 .section-info img {
@@ -266,6 +267,16 @@ main, .cocktail-section {
 
 .section-info ul {
   padding-left: 2rem;
+}
+
+@media (max-width: 767px) { 
+  .section-info .drink {
+    display: block;
+  }
+
+  .section-info .drink-info {
+    padding: 30px 0;
+  }
 }
 
 .cocktails-center {
@@ -389,6 +400,13 @@ main, .cocktail-section {
   padding: 5px;
   text-align: center;
   letter-spacing: 0
+}
+
+@media (max-width: 768px) { 
+
+.footer .btn {
+  padding: 3px;
+  }
 }
 
 /* Dark */
