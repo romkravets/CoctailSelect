@@ -3,7 +3,6 @@ import {IconSun} from './IconSun';
 import {IconMoon} from './IconMoon';
 import {context} from '../../App';
 
-
 const ThemeButton = (props) => {
  
     const theam = useContext(context);

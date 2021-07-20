@@ -67,7 +67,7 @@ const RandomCocktail = ({setOpen}) => {
   } else {
      return (
       <section className="section">
-       <h3 className="section-title">Песональна пропозиція...</h3>
+       <h3 className="section-title">Пеpсональна пропозиція...</h3>
         <div className="cocktails-center">
      
               <article className="cocktail random-coctail" key={item.id}>

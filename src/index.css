@@ -1,27 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300i,400|Solway:400,500&display=swap");
 
 :root {
-  --primaryLightColor: #d4e6a5;
-  --primaryColor: #476a2e;
-  --primaryDarkColor: #c02c03;
   --primaryFont: "Open Sans", sans-serif;
   --slantedFont: "Solway", serif;
   --mainWhite: #fff;
-  --offWhite: #f7f7f7;
   --mainBackground: #f8f8f8;
-  --mainOverlay: rgba(35, 10, 36, 0.4);
   --mainBlack: #222;
-  --mainGrey: #ececec;
-  --darkGrey: #afafaf;
-  --mainRed: #bd0303;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.3rem;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --mainBorderRadius: 0.25rem;
-  --smallWidth: 85vw;
-  --maxWidth: 40rem;
-  --fullWidth: 1170px;
 }
 
 * {
@@ -74,10 +61,24 @@ main {
   padding: 0 30px;
 }
 
+@media (max-width: 767px) { 
+  .main {
+    padding: 0 10px;
+  }
+}
+
 .section-title {
   font-family: var(--primaryFont);
   padding: 10px;
 }
+
+@media (max-width: 767px) { 
+  .section-title {
+  font-size: 1rem;
+  }
+}
+
+
 
 .loading {
   text-transform: capitalize;
@@ -156,6 +157,23 @@ main {
   align-items: baseline;
 }
 
+
+@media (max-width: 767px) { 
+  .navbar {
+    height: 6rem;
+  }
+}
+
+@media (max-width: 767px) { 
+  .footer {
+    display: block;
+    height: 10rem;
+  }
+  .footer .section-title {
+    font-size: 0.6rem;
+  }
+}
+
 .btn-theme {
   cursor: pointer;
   padding: 5px;
@@ -189,14 +207,30 @@ main {
   .navbar-search {
     flex-direction: column;
   }
- }
-
-main, .cocktail-section {
-  padding-top: 1rem;
+  .navbar-search h2 {
+    font-size: 1rem;
+  }
 }
 
-.search-section {
+main, .cocktail-section {
   padding-top: 4rem;
+}
+
+@media (max-width: 767px) { 
+  main, .cocktail-section {
+    padding-top: 4rem;
+  }
+}
+
+@media (max-width: 767px) { 
+  .section-search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    margin-top: 10px;
+  }
 }
 
 .section-search input {
@@ -248,6 +282,12 @@ main, .cocktail-section {
 
 .random-coctail {
   display: flex;
+}
+
+@media (max-width: 767px) {
+  .random-coctail {
+    display: block;
+  }
 }
 
 .cocktails-center img {
@@ -353,7 +393,6 @@ main, .cocktail-section {
 }
 
 /* Dark */
-
 body.dark {
   background-color: black;
   color: white;
@@ -409,7 +448,6 @@ body.dark .modalOverlay {
 }
 
 /* Modal Portal */
-
 .modal {
   position: fixed;
   bottom: 30px;

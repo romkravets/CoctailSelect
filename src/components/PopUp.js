@@ -14,7 +14,7 @@ const PopUp = ({toggleModal, toggleCloseModal, children, hendlerBy}) => {
                {children}
             </div>
          </div> 
-         </>
+      </>
     );
 }
 

@@ -8,14 +8,11 @@ function Cart({hendlerBy}) {
 
    const cartlist = cart.map((item,index) => {
       return (
-
         <div key={index} className="card card-modal">
-            
             <article className="cocktail" key={item.id}>
                 <div className="img-container">
                   <img src={item.image} alt={item.name} />
                 </div>
-               
                 <div className="cocktail-footer">
                   <h3>{item.name}</h3>
                   <h4>{item.glass}</h4>
@@ -25,7 +22,7 @@ function Cart({hendlerBy}) {
                   <RemoveButton item={item}/>
                 </div>
             </article>
-      </div>
+        </div>
       )
     })
 
@@ -47,11 +44,11 @@ function Cart({hendlerBy}) {
         </div>
 
       </div>
-      )
-
-      } else{
-        return <p>Не вибрано жодного коктейлю...</p>
-      }
+    )
+    
+    } else{
+      return <p>Не вибрано жодного коктейлю...</p>
+    }
 }
 
 export default Cart;

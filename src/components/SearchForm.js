@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function SearchForm({ setInput,  handleSubmit, input }) {
-    const handleChange = e => {
+export default function SearchForm({ setInput, handleSubmit, input }) {
+  const handleChange = e => {
     setInput(e.target.value);
   };
 

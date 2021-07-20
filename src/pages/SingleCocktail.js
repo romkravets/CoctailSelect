@@ -90,12 +90,12 @@ export default function SingleCocktail({setOpen}) {
             <div>
               <strong>Інгредієнти:</strong> {" "}
               <ul>
-              {ingredients.map((item, index) => {
-                return item ? <li key={index}>{item}</li> : null;
-              })}
+                {ingredients.map((item, index) => {
+                  return item ? <li key={index}>{item}</li> : null;
+                })}
               </ul>
             </div>
-             <AddBtn item={item} setOpen={setOpen}/>
+            <AddBtn item={item} setOpen={setOpen}/>
           </div>
         </div>
       </section>
