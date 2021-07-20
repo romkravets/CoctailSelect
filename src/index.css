@@ -167,7 +167,7 @@ main {
 @media (max-width: 767px) { 
   .footer {
     display: block;
-    height: 10rem;
+    height: 6rem;
   }
   .footer .section-title {
     font-size: 0.6rem;
