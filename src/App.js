@@ -16,16 +16,24 @@ export const context = React.createContext({isTheam: true});
 const App = () => {
 
   const { cartCount, cart, removeAll } = useContext(listContext);
+
   const history = useHistory();
+
   const [theam, setTheam] = useState(true);
   const [alpabetTerm, setAlpabetTerm] = useState(null);
+
   const [input, setInput] = useState("");
+
   const [modal, setModal] = useState(false);
   const [isOpen, setOpen] = useState(false);
+
   const [loading, setLoading] = useState(false);
+
   const [redirect, setRedirect] = useState(false);
 
   const [item, setItem] = useState([]);
+
+  const [modalContent, setModalContent] = useState("Added to bascket");
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -121,10 +129,19 @@ const App = () => {
 
   const toggleModal = () => {
     if  (cart.length === 0) {
+      debugger;
       setModal(false);
-      alert("Спочатку оберіть коктейль")
+      setModalContent("First select cocteils");
+      setOpen(true);
+      const timeout = setTimeout(() => {
+        setOpen(false);
+        setModalContent("Added to bascket");   
+      }, 1000);
+      return () => clearTimeout(timeout);
     } else {
-      setModal(true);
+      setModal(true)
+      setOpen(false);
+      setModalContent("Added to bascket");
     }
   }
 
@@ -183,7 +200,7 @@ const App = () => {
       )}
       {
         isOpen  && (
-          <Modal setOpen={setOpen} isOpen={isOpen}/>
+          <Modal setOpen={setOpen} isOpen={isOpen} content={modalContent}/>
           )
         }
   </div>

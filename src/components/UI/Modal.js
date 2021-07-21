@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Modal = ({isOpen}) => isOpen && ReactDOM.createPortal(  
+const Modal = ({isOpen, content}) => isOpen && ReactDOM.createPortal(  
    <div className="modal">
          <div className="modal-wrap">
             <div className="modal-content">
-               Коктейль додано до кошика! <br/>
-               Продовжуємо!
+              {content}
             </div>
       </div>
    </div>,

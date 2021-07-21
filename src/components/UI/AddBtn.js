@@ -20,7 +20,7 @@ export function AddBtn({item, setOpen}) {
         setOpen(true);
         timeOutFunction();
       }}>
-        {stt.cart.indexOf(item.id) ? 'Додати' : 'Додати ще...'}
+        {stt.cart.indexOf(item.id) ? 'Add' : 'Add more...'}
       </button>    
     )
   }

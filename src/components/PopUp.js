@@ -1,6 +1,6 @@
 import React from 'react';
 import Cart from './Cart';
-const PopUp = ({toggleModal, toggleCloseModal, children, hendlerBy}) => {
+const PopUp = ({toggleCloseModal, children, hendlerBy}) => {
 
     return (
        <>
@@ -8,9 +8,9 @@ const PopUp = ({toggleModal, toggleCloseModal, children, hendlerBy}) => {
          <div className="modalWrap">
             <div className="modal">
                <div className="btn-close" onClick={() => toggleCloseModal()}>
-                     <i className="fa fa-times" aria-hidden="true"></i>
+                  <i className="fa fa-times" aria-hidden="true"></i>
                </div>
-               <Cart  hendlerBy={hendlerBy} />
+                  <Cart  hendlerBy={hendlerBy} />
                {children}
             </div>
          </div> 
